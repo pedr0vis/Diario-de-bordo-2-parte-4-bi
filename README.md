@@ -40,4 +40,14 @@ Fornece operações que geram novas relações a partir de relações existentes
 
 ## Normalização de Banco de Dados
 
+Principais pontos focados:
+- Redução da redundância
+- Aumento da integridade
+- Melhoria no desempenho
+- Facilidade de manutenção
 
+### Normalização de Relações
+
+A normalização tem o processo de decompor relações "ruins" dividindo seus atributos em relações menores. Outra maneira de entender é dizer que a forma normal é "uma regra que tem que ser obedecida pela tabela para que ela seja considerada bem projetada" (HEUSER, 2009).
+
+**Forma normal**: Indica o número de qualidade de uma relação.
