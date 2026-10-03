@@ -1,8 +1,6 @@
 # Diário de bordo 2º parte 4º bi
 Diário de bordo para a segunda parte do segundo bimeste de análise e desenvolvimento de sistemas.
 
----
-
 <br>
 
 ## Banco de dados
@@ -57,7 +55,7 @@ As normalizações 2FN, 3FN e BCNF se baseiam em chave de dependências funciona
 
 ### Atividade dia 30/09/2026 - Prática da normalização
 
-Tabela exemplo:
+#### Tabela exemplo:
 
 | CodProj | Tipo | Descr | EmpregadosAlocados |
 |---|---|---|---|
@@ -67,5 +65,65 @@ Tabela exemplo:
 | ERP04 | Migracao | Modulo Financeiro | 9932-Ana-CatB2-Sal9500-10/01/95-40h<br>6126-Jose-CatB1-Sal9000-15/01/95-20h<br>8191-Mario-CatA1-Sal4000-15/01/95-40h<br>2146-Joao-CatA1-Sal4000-20/01/95-40h |
 | MOB05 | Novo Desenv. | App de Entregas | 5543-Lucas-CatA1-Sal4000-05/06/95-40h<br>4112-Joao-CatA2-Sal5500-10/06/95-20h<br>3145-Silvio-CatA2-Sal5500-10/06/95-20h<br>7721-Paula-CatC1-Sal12000-15/06/95-10h |
 
-Tabela Final com normalizações:
+#### Tabela Final com normalizações:
 
+**ProjEmp**
+ 
+|CodProj|CodEmp|DataIni|TempAl|
+|-|-|-|-|
+|LSC001|2146|01/11/91|24h|
+|LSC001|3145|02/10/91|24h|
+|LSC001|6126|03/10/92|18h|
+|LSC001|1214|04/10/92|18h|
+|LSC001|8191|01/11/92|12h|
+|PAG02|8191|01/05/93|12h|
+|PAG02|4112|04/01/91|24h|
+|PAG02|6126|01/11/92|12h|
+|PAG02|7721|10/05/93|40h|
+|CRM03|3145|15/02/94|20h|
+|CRM03|1214|15/02/94|40h|
+|CRM03|9932|20/02/94|40h|
+|CRM03|5543|01/03/94|20h|
+|CRM03|7721|01/03/94|10h|
+|ERP04|9932|10/01/95|40h|
+|ERP04|6126|15/01/95|20h|
+|ERP04|8191|15/01/95|40h|
+|ERP04|2146|20/01/95|40h|
+|MOB05|5543|05/06/95|40h|
+|MOB05|4112|10/06/95|20h|
+|MOB05|3145|10/06/95|20h|
+|MOB05|7721|15/06/95|10h|
+ 
+**EMP**
+ 
+|CodEmp|Nome|Cat|
+|-|-|-|
+|1214|Carlos|CatA2|
+|2146|Joao|CatA1|
+|3145|Silvio|CatA2|
+|4112|Joao|CatA2|
+|5543|Lucas|CatA1|
+|6126|Jose|CatB1|
+|7721|Paula|CatC1|
+|8191|Mario|CatA1|
+|9932|Ana|CatB2|
+ 
+ **CodCat**
+ 
+|Cat|Salario|
+|-|-|
+|CatA1|4000|
+|CatA2|5500|
+|CatB1|9000|
+|CatB2|9500|
+|CatC1|12000|
+
+**PROJ**
+ 
+|CodProj|Tipo|Descr|
+|-|-|-|
+|LSC001|Novo Desenv.|Sistema de Estoque|
+|PAG02|Manutencao|Sistema de RH|
+|CRM03|Novo Desenv.|Gestao de Clientes|
+|ERP04|Migracao|Modulo Financeiro|
+|MOB05|Novo Desenv.|App de Entregas|
